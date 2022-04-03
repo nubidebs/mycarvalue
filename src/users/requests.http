@@ -7,17 +7,17 @@ content-type: application/json
 }
 
 ### Get user
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/2
 
 
 ### Get user by email
-GET http://localhost:3000/auth?email=email2@email.com
+GET http://localhost:3000/auth?email=email2444@email.com
 
 ### Delete user
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/4re43523r
 
 ### Update user
-PATCH http://localhost:3000/auth/2
+PATCH http://localhost:3000/auth/293847928984
 content-type: application/json
 
 {
