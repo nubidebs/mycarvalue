@@ -1,14 +1,28 @@
+POST http://localhost:3001/auth/signup
+content-type: application/json
+
+{
+    "email": "debora55@email.com",
+    "password": "password"
+}
+
+### Signin
 POST http://localhost:3001/auth/signin
 content-type: application/json
 
 {
-    "email": "debora4@email.com",
-    "password": "password4"
+    "email": "debora55@email.com",
+    "password": "password"
 }
+
+### Signout
+POST http://localhost:3001/auth/signout
 
 ### Get user
 GET http://localhost:3001/auth/2
 
+### Who am I
+GET http://localhost:3001/auth/whoami
 
 ### Get user by email
 GET http://localhost:3001/auth?email=email2444@email.com
@@ -24,3 +38,9 @@ content-type: application/json
     "email": "email2@email.com",
     "password": "password2"
 }
+
+### Set a color
+GET http://localhost:3001/auth/colors/dfaadasdas
+
+### Set a color
+GET http://localhost:3001/auth/colors
