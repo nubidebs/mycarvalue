@@ -10,6 +10,6 @@ async function bootstrap() {
       whitelist: true, // Additional properties sent in the body of POST requests are stripped out
     }),
   );
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();

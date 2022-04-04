@@ -6,13 +6,15 @@ import { User } from './user.entity';
 
 @Injectable()
 export class UsersService {
-  /* repo: argument name.
+  // Add in the constructor the dependencies it might need
+  constructor(@InjectRepository(User) private repo: Repository<User>) {}
+
+  /* repo: Repository<User>
     Type annotation of repo is Repository, we applied a generic type to it of User: which means that
     repos is going to be an instance of a TypeORM repository that deals with instances of users
     @InjectRepository: aid to the dep injection system that tells to inject the generic User 
     (used because we are using the generic type of User)*/
 
-  constructor(@InjectRepository(User) private repo: Repository<User>) {}
   create(email: string, password: string) {
     const user = this.repo.create({ email, password });
 
