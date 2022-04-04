@@ -8,15 +8,15 @@ import {
   Patch,
   Post,
   Query,
-  UseInterceptors,
 } from '@nestjs/common';
-import { SerializeInterceptor } from 'src/interceptors/serialize.interceptors';
+import { Serialize } from 'src/interceptors/serialize.interceptors';
 import { CreateUserDto } from 'src/users/dtos/create-user.dto';
 import { UpdateUserDto } from './dtos/update-user.dto';
 import { UserDto } from './dtos/user.dto';
 import { UsersService } from './users.service';
 
 @Controller('auth')
+@Serialize(UserDto)
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
@@ -24,7 +24,6 @@ export class UsersController {
   createUser(@Body() body: CreateUserDto) {
     this.usersService.create(body.email, body.password);
   }
-  @UseInterceptors(new SerializeInterceptor(UserDto))
   @Get('/:id')
   async findUser(@Param('id') id: string) {
     // Use parse because id is a string when I get it from database
