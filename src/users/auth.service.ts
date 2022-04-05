@@ -19,7 +19,7 @@ export class AuthService {
     if (users.length) {
       throw new BadRequestException('Email in use');
     }
-    // Hash user pw
+    // Hash and salt user pw
     // 1. Generate salt (16 char long string). toString('hex') returns a Buffer
     const salt = randomBytes(8).toString('hex');
     // 2. Hash salt and pw together
