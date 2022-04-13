@@ -4,6 +4,6 @@ export const CurrentUser = createParamDecorator(
   //ExecutionContext wrapper around incoming request
   (data: never, context: ExecutionContext) => {
     const request = context.switchToHttp().getRequest();
-    return request.CurrentUser;
+    return request.currentUser;
   },
 );
