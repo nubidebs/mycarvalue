@@ -2,13 +2,13 @@ POST http://localhost:3001/reports
 content-type: application/json
 
 {
-  "make": "citroen",
-  "model": "c1",
+  "make": "toyota",
+  "model": "corolla",
   "year": 2019,
   "mileage": 2000,
-  "lng": 0,
-  "lat": 0,
-  "price": 500000
+  "lng": 13,
+  "lat": 27,
+  "price": 70000
 }
 
 
@@ -17,5 +17,9 @@ PATCH http://localhost:3001/reports/9
 content-type: application/json
 
 {
-  "approved": false
+  "approved": true
 }
+
+
+### Get estimate
+GET  http://localhost:3001/reports?make=toyota&model=corolla&lng=0&lat=0&mileage=120000&year=1980

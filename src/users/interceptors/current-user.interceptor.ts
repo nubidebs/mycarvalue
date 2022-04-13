@@ -3,6 +3,7 @@
   We replaced the interceptor with a middleware to make sure the checks
   happen before we reach the AuthGuard step 
 
+  */
 
 import {
   CallHandler,
@@ -27,6 +28,3 @@ export class CurrentUserInterceptor implements NestInterceptor {
     return handler.handle();
   }
 }
-
-
- */
