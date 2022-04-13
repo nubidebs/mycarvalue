@@ -27,13 +27,6 @@ const cookieSession = require('cookie-session');
         };
       },
     }),
-    // PRE_REFACTOR TO USE VARIABLES
-    // TypeOrmModule.forRoot({
-    //   type: 'sqlite',
-    //   database: 'db.sqlite',
-    //   entities: [User, Report],
-    //   synchronize: true, // automatic migrations
-    // }),
     UsersModule,
     ReportsModule,
   ],

@@ -2,7 +2,7 @@ POST http://localhost:3001/auth/signup
 content-type: application/json
 
 {
-    "email": "debora55@email.com",
+    "email": "debora000@email.com",
     "password": "password"
 }
 
@@ -11,7 +11,7 @@ POST http://localhost:3001/auth/signin
 content-type: application/json
 
 {
-    "email": "debora55@email.com",
+    "email": "debora600@email.com",
     "password": "password"
 }
 

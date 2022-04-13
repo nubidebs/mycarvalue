@@ -1,0 +1,21 @@
+POST http://localhost:3001/reports
+content-type: application/json
+
+{
+  "make": "citroen",
+  "model": "c1",
+  "year": 2019,
+  "mileage": 2000,
+  "lng": 0,
+  "lat": 0,
+  "price": 500000
+}
+
+
+### approve reports
+PATCH http://localhost:3001/reports/9
+content-type: application/json
+
+{
+  "approved": false
+}
