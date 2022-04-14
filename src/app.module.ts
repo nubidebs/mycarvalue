@@ -22,7 +22,7 @@ const cookieSession = require('cookie-session');
         return {
           type: 'sqlite',
           database: config.get<string>('DB_NAME'),
-          synchronize: true,
+          synchronize: true, // this is not good practice, in prod use migrations instead
           entities: [User, Report],
         };
       },
